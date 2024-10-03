@@ -2,20 +2,20 @@ import express from "express"
 import Product from "../models/Product.model.js"
 import { createProduct, deleteProduct, getProducts ,updateProduct } from "../controllers/Product.controller.js"
 
-const router = express.Router()
+const productRoutes = express.Router()
 
 
 // Product routes
-router.get("/",getProducts)
+productRoutes.get("/",getProducts)
 
-router.post("/", createProduct)
+productRoutes.post("/", createProduct)
 
-router.put("/:id", updateProduct)
+productRoutes.put("/:id", updateProduct)
 
-router.delete("/:id", deleteProduct)
-
-
+productRoutes.delete("/:id", deleteProduct)
 
 
 
-export default router
+
+
+export default productRoutes

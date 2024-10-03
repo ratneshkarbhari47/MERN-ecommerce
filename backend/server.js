@@ -1,7 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import { connectDb } from "./config/db.js"
-import router from "./routes/product.route.js"
+import productRoutes from "./routes/product.route.js"
 
 const app = express()
 dotenv.config()
@@ -9,7 +9,7 @@ dotenv.config()
 app.use(express.json())
 
 // Routes
-app.use("/api/products",router)
+app.use("/api/products",productRoutes)
 
 
 
